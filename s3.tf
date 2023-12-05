@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "cohort_demo" {
-  bucket = "cohort-demo"
+  bucket = var.bucket_name
 }
 
 resource "aws_s3_bucket_acl" "cohort_demo_acl" {
@@ -27,7 +27,7 @@ resource "aws_s3_bucket_public_access_block" "cohort_demo_s3_bucket_public_acces
 ///////
 // Log bucket
 resource "aws_s3_bucket" "cohort_demo_log_bucket" {
-  bucket = "cohort-demo-log-bucket"
+  bucket = var.log_bucket_name
 }
 
 resource "aws_s3_bucket_acl" "cohort_demo_log_bucket_acl" {
