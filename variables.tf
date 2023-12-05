@@ -8,10 +8,16 @@ variable "log_bucket_name" {
   //default     = ""
 }
 
-variable "efs_subnet_ids" {
+variable "efs_subnet_1_ids" {
   description = "EFS subnet ids"
   //type    = list(string)
-  default     = ["", ""] 
+  //default     = ["", ""] 
+}
+
+variable "efs_subnet_2_ids" {
+  description = "EFS subnet ids"
+  //type    = list(string)
+  //default     = ["", ""] 
 }
 
 variable "efs_sg_depends_on" {
