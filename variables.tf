@@ -23,3 +23,18 @@ variable "vpc_id" {
   description = "VPC main id"
   //default     = ""
 }
+
+variable "cohort_demo_efs_sg_name" {
+  description = "EFS SG name"
+  //default     = ""
+}
+
+variable "cohort_demo_efs_creation_token" {
+  description = "EFS creation token"
+  //default     = ""
+}
+
+variable "cohort_demo_efs_with_lifecyle_policy_creation_token" {
+  description = "EFS lifecycle policy creation token"
+  //default     = ""
+}

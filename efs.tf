@@ -1,5 +1,5 @@
 resource "aws_efs_file_system" "cohort_demo_efs" {
-   creation_token = "cohort_demo_efs"
+   creation_token = var.cohort_demo_efs_creation_token
    performance_mode = "generalPurpose"
    throughput_mode = "bursting"
    encrypted = "true"
@@ -7,7 +7,7 @@ resource "aws_efs_file_system" "cohort_demo_efs" {
  }
 
  resource "aws_efs_file_system" "cohort_demo_efs_with_lifecyle_policy" {
-  creation_token = "cohort_demo_efs_with_lifecyle_policy"
+  creation_token = var.cohort_demo_efs_with_lifecyle_policy_creation_token
 
   lifecycle_policy {
     transition_to_ia = "AFTER_30_DAYS"
