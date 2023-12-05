@@ -2,7 +2,7 @@ resource "aws_security_group" "cohort_demo_efs_sg" {
   depends_on = [
     var.efs_sg_depends_on,
   ]
-  name        = var.cohort_demo_efs_sg_name
+  name        = "cohort_demo_efs_security_group"
   description = "Security group for efs storage"
   vpc_id      = var.vpc_id
  

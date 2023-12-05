@@ -24,11 +24,6 @@ variable "vpc_id" {
   //default     = ""
 }
 
-variable "cohort_demo_efs_sg_name" {
-  description = "EFS SG name"
-  //default     = ""
-}
-
 variable "cohort_demo_efs_creation_token" {
   description = "EFS creation token"
   //default     = ""
