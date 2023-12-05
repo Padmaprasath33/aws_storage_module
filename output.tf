@@ -3,7 +3,7 @@ output "cohort_demo_efs_filesystem_id" {
 }
 
 output "cohort_demo_efs-mount_target" {
-  value = aws_efs_mount_target.cohort_demo_efs_mount_target.id
+  value = aws_efs_mount_target.cohort_demo_efs_mount_target[*].id
 }
 
 output "cohort_demo_s3_bucket_id" {
