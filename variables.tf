@@ -15,7 +15,7 @@ variable "efs_subnet_ids" {
   default     = ["", ""] 
 }
 
-variable "efs_subnet_1_ids" {
+/*variable "efs_subnet_1_ids" {
   description = "EFS subnet ids"
   //type    = list(string)
   //default     = ["", ""] 
@@ -26,6 +26,7 @@ variable "efs_subnet_2_ids" {
   //type    = list(string)
   //default     = ["", ""] 
 }
+*/
 
 variable "efs_sg_depends_on" {
   description = "EFS security group calling other security groups as inputs for inbound & outbound"
