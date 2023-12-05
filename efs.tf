@@ -3,17 +3,10 @@ resource "aws_efs_file_system" "cohort_demo_efs" {
    performance_mode = "generalPurpose"
    throughput_mode = "bursting"
    encrypted = "true"
-
- }
-
- resource "aws_efs_file_system" "cohort_demo_efs_with_lifecyle_policy" {
-  creation_token = var.cohort_demo_efs_with_lifecyle_policy_creation_token
-
-  lifecycle_policy {
+   lifecycle_policy {
     transition_to_ia = "AFTER_30_DAYS"
   }
-}
-
+ }
 
 resource "aws_efs_mount_target" "cohort_demo_efs_mount_target" {
    file_system_id  = aws_efs_file_system.cohort_demo_efs.id

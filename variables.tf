@@ -33,8 +33,3 @@ variable "cohort_demo_efs_creation_token" {
   description = "EFS creation token"
   //default     = ""
 }
-
-variable "cohort_demo_efs_with_lifecyle_policy_creation_token" {
-  description = "EFS lifecycle policy creation token"
-  //default     = ""
-}
