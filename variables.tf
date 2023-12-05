@@ -10,7 +10,7 @@ variable "log_bucket_name" {
 
 variable "efs_subnet_ids" {
   description = "EFS subnet ids"
-  type    = list(string)
+  //type    = list(string)
   //default     = ""
 }
 
