@@ -11,22 +11,8 @@ variable "log_bucket_name" {
 variable "efs_subnet_ids" {
   description = "EFS subnet ids"
   type    = list(string)
-  //type = tuple([string, string])
   default     = ["", ""] 
 }
-
-/*variable "efs_subnet_1_ids" {
-  description = "EFS subnet ids"
-  //type    = list(string)
-  //default     = ["", ""] 
-}
-
-variable "efs_subnet_2_ids" {
-  description = "EFS subnet ids"
-  //type    = list(string)
-  //default     = ["", ""] 
-}
-*/
 
 variable "efs_sg_depends_on" {
   description = "EFS security group calling other security groups as inputs for inbound & outbound"
