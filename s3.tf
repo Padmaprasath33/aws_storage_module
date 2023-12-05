@@ -2,10 +2,11 @@ resource "aws_s3_bucket" "cohort_demo" {
   bucket = var.bucket_name
 }
 
-resource "aws_s3_bucket_acl" "cohort_demo_acl" {
+/*resource "aws_s3_bucket_acl" "cohort_demo_acl" {
   bucket = aws_s3_bucket.cohort_demo.id
   acl    = "private"
 }
+*/
 
 resource "aws_s3_bucket_versioning" "cohort_demo_bucket_versioning" {
   bucket = aws_s3_bucket.cohort_demo.id
@@ -30,10 +31,11 @@ resource "aws_s3_bucket" "cohort_demo_log_bucket" {
   bucket = var.log_bucket_name
 }
 
-resource "aws_s3_bucket_acl" "cohort_demo_log_bucket_acl" {
+/*resource "aws_s3_bucket_acl" "cohort_demo_log_bucket_acl" {
   bucket = aws_s3_bucket.cohort_demo_log_bucket.id
   acl    = "log-delivery-write"
 }
+*/
 
 resource "aws_s3_bucket_versioning" "cohort_demo_log_bucket_bucket_versioning" {
   bucket = aws_s3_bucket.cohort_demo_log_bucket.id
