@@ -24,7 +24,7 @@ variable "vpc_id" {
   //default     = ""
 }
 
-variable "cohort_demo_efs_creation_token" {
-  description = "EFS creation token"
+variable "region" {
+  description = "AWS region"
   //default     = ""
 }

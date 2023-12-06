@@ -1,5 +1,5 @@
 resource "aws_efs_file_system" "cohort_demo_efs" {
-   creation_token = var.cohort_demo_efs_creation_token
+   creation_token = "cohort_demo_efs_creation_token_${var.region}"
    performance_mode = "generalPurpose"
    throughput_mode = "bursting"
    encrypted = "true"
