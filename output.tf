@@ -21,7 +21,3 @@ output "kms_mykey_cohort_demo_id" {
 output "kms_mykey_cohort_demo_arn" {
   value = aws_kms_key.mykey_cohort_demo.arn
 }
-
-output "cohort_demo_efs_sg_id" {
-  value = aws_security_group.cohort_demo_efs_sg.id
-}
