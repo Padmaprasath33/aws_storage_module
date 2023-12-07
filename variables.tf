@@ -14,8 +14,8 @@ variable "efs_subnet_ids" {
   default     = ["", ""] 
 }
 
-variable "efs_sg_depends_on" {
-  description = "EFS security group calling other security groups as inputs for inbound & outbound"
+variable "cohort_demo_efs_sg" {
+  description = "EFS security group"
   //default     = ""
 }
 
