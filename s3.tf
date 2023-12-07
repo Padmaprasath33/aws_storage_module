@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "cohort_demo" {
   bucket = var.bucket_name
+  tags = var.resource_tags_dr
 }
 
 resource "aws_s3_bucket_versioning" "cohort_demo_bucket_versioning" {
@@ -20,6 +21,7 @@ resource "aws_s3_bucket_public_access_block" "cohort_demo_s3_bucket_public_acces
 
 resource "aws_s3_bucket" "cohort_demo_log_bucket" {
   bucket = var.log_bucket_name
+  tags = var.resource_tags_dr
 }
 
 resource "aws_s3_bucket_versioning" "cohort_demo_log_bucket_bucket_versioning" {
@@ -48,6 +50,7 @@ resource "aws_s3_bucket_logging" "cohort_demo_log_bucket" {
 resource "aws_kms_key" "mykey_cohort_demo" {
   description             = "This key is used to encrypt bucket objects"
   deletion_window_in_days = 10
+  tags = var.resource_tags
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "cohort_demo_s3_bucket_server_side_encryption_configuration" {

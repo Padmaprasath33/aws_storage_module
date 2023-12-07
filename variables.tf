@@ -1,3 +1,26 @@
+variable "resource_tags" {
+  description = "Tags to set for all resources"
+  type        = map(string)
+  /*default     = {
+    project     = "aws-proserv",
+    environment = "dev"
+    application = "cohort-demo"
+  }
+  */
+}
+
+variable "resource_tags_dr" {
+  description = "Tags to set for all resources"
+  type        = map(string)
+  /*default     = {
+    project     = "aws-proserv",
+    environment = "dev"
+    application = "cohort-demo"
+    backup      = "yes"
+  }
+  */
+}
+
 variable "bucket_name" {
   description = "S3 bucket name"
   //default     = ""

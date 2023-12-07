@@ -6,6 +6,7 @@ resource "aws_efs_file_system" "cohort_demo_efs" {
    lifecycle_policy {
     transition_to_ia = "AFTER_30_DAYS"
   }
+  tags = var.resource_tags_dr
  }
 
 resource "aws_efs_mount_target" "cohort_demo_efs_mount_target" {
