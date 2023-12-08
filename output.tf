@@ -2,6 +2,10 @@ output "cohort_demo_efs_filesystem_id" {
   value = aws_efs_file_system.cohort_demo_efs.id
 }
 
+output "aws_efs_access_point_id" {
+  value = aws_efs_access_point.cohort_demo_efs_access_point.id
+}
+
 output "cohort_demo_efs-mount_target" {
   value = aws_efs_mount_target.cohort_demo_efs_mount_target[*].id
 }

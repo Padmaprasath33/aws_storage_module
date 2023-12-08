@@ -15,3 +15,7 @@ resource "aws_efs_mount_target" "cohort_demo_efs_mount_target" {
    subnet_id = var.efs_subnet_ids[count.index]
    security_groups = [var.cohort_demo_efs_sg]
  }
+
+ resource "aws_efs_access_point" "cohort_demo_efs_access_point" {
+  file_system_id = aws_efs_file_system.cohort_demo_efs.id
+}
