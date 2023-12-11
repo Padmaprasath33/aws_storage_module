@@ -10,7 +10,7 @@ output "cohort_demo_efs-mount_target" {
   value = aws_efs_mount_target.cohort_demo_efs_mount_target[*].id
 }
 
-output "cohort_demo_s3_bucket_id" {
+/*output "cohort_demo_s3_bucket_id" {
   value = aws_s3_bucket.cohort_demo.id
 }
 
@@ -25,3 +25,4 @@ output "kms_mykey_cohort_demo_id" {
 output "kms_mykey_cohort_demo_arn" {
   value = aws_kms_key.mykey_cohort_demo.arn
 }
+*/
