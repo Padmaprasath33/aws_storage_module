@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "cohort_demo" {
+/*resource "aws_s3_bucket" "cohort_demo" {
   bucket = var.bucket_name
   tags = var.resource_tags_dr
 }
@@ -74,3 +74,4 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "cohort_demo_log_b
     }
   }
 }
+*/
